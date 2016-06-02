@@ -14,5 +14,11 @@ RUN yum -y install zsh \
 # node.js
 RUN curl --silent --location https://rpm.nodesource.com/setup_6.x | bash - \
     && yum -y install nodejs
+    
+RUN npm i -g pm2 supervisor bunyan
+
+WORKDIR /usr/src/app
+
+VOLUME ["/usr/src/app"]
 
 CMD ["zsh"]
