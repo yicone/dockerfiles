@@ -1,5 +1,8 @@
 FROM centos
 
+# change timezone
+cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
 # common tools
 RUN yum -y groupinstall "Development Tools"
 
