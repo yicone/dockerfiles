@@ -1,8 +1,8 @@
 FROM node:6
 
-RUN export TZ="Asia/Shanghai"
+RUN cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+# env export TZ="Asia/Shanghai"
 
-# Create app directory
 WORKDIR /usr/src/app
 
 # Add our user and group first to make sure their IDs get assigned consistently
