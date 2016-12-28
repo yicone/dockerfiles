@@ -13,7 +13,7 @@ RUN npm i -g --silent n npm-check webpack eslint gulp mocha ava && \
 # https://hub.docker.com/r/bwithem/oh-my-zsh-tmux/~/dockerfile/
 RUN mv ~/.zshrc ~/.zshrc.bak && \
     sed 's/ZSH_THEME=".*"/ZSH_THEME="ys"/' ~/.zshrc.bak > ~/.zshrc && \
-    sed 's/plugins=(git)/plugins=(git git-extras git-flow git-prompt gitfast gitignore history docker docker-compose z fasd zmv nmap httpie iwhois pod sudo themes tmux command-not-found colored-man-pages zsh-navigation-tools zsh-completions)/g' ~/.zshrc.bak > ~/.zshrc && \
+    sed 's/plugins=(git)/plugins=(git tig git-extras git-flow git-prompt gitfast gitignore history node npm docker docker-compose z fasd zmv nmap httpie iwhois pod sudo themes tmux command-not-found colored-man-pages zsh-navigation-tools zsh-completions)/g' ~/.zshrc.bak > ~/.zshrc && \
     usermod -s /bin/zsh root
 
- ENTRYPOINT ["zsh"]
+ENTRYPOINT ["zsh"]
