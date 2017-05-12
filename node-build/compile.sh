@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -xe
 # Set directory to where we expect code to be
 cd /usr/src/app/${SRC_PATH}
 echo "Downloading dependencies"
