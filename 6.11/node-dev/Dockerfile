@@ -1,4 +1,4 @@
-FROM reluxy/node
+FROM reluxy/node:6
 
 #RUN apt-get upgrade -y
 RUN apt-get update &&  \
