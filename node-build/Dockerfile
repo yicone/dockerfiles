@@ -1,4 +1,5 @@
-FROM node:7.8
+ARG CODE_VERSION=latest
+FROM node:${CODE_VERSION}
 
 ENV TZ="Asia/Shanghai"
 

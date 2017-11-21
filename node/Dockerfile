@@ -1,4 +1,5 @@
-FROM node:6
+ARG CODE_VERSION=latest
+FROM node:${CODE_VERSION}
 
 # RUN cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 ENV TZ="Asia/Shanghai"

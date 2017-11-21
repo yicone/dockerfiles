@@ -1,4 +1,5 @@
-FROM reluxy/node:6
+ARG CODE_VERSION=latest
+FROM reluxy/node:${CODE_VERSION}
 
 #RUN apt-get upgrade -y
 RUN apt-get update &&  \
