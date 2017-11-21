@@ -1,7 +1,9 @@
 FROM node:7.8
 
+ENV TZ="Asia/Shanghai"
+
 RUN npm config set registry https://registry.npm.taobao.org \
-	&& npm i -g --silent bunyan webpack eslint gulp mocha ava\
+	&& npm i -g --silent bunyan \
 	&& npm cache clear
 
 ADD compile.sh /tmp/compile.sh

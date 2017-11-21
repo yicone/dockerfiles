@@ -7,7 +7,7 @@ RUN apt-get update &&  \
 	export TERM=linux; curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | zsh || true && \
 	touch /root/.z
 
-RUN npm i -g --silent n npm-check webpack eslint gulp mocha ava && \
+RUN npm i -g --silent n npm-check && \
 	npm cache clear
 
 # https://hub.docker.com/r/bwithem/oh-my-zsh-tmux/~/dockerfile/
