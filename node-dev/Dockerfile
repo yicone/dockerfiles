@@ -1,5 +1,6 @@
-ARG CODE_VERSION=latest
-FROM reluxy/node:${CODE_VERSION}
+ARG DOCKER_REGISTRY=10.106.136.21:5000
+ARG NODE_VERSION=latest
+FROM ${DOCKER_REGISTRY}/reluxy/node:${NODE_VERSION}
 
 #RUN apt-get upgrade -y
 RUN apt-get update &&  \
@@ -8,8 +9,7 @@ RUN apt-get update &&  \
 	export TERM=linux; curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | zsh || true && \
 	touch /root/.z
 
-RUN npm i -g --silent n npm-check && \
-	npm cache clear
+RUN npm i -g --silent n npm-check
 
 # https://hub.docker.com/r/bwithem/oh-my-zsh-tmux/~/dockerfile/
 RUN mv ~/.zshrc ~/.zshrc.bak && \
