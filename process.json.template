@@ -1,0 +1,10 @@
+{
+    "name": "app",
+    "script": "dist/index.js",
+    "log_date_format": "YYYY-MM-DD HH:mm:ss",
+    "watch": false,
+    "ignore_watch": ["src", "node_modules"],
+    "watch_options": {
+        "usePolling": true
+    }
+}

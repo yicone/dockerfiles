@@ -1,0 +1,17 @@
+ARG DOCKER_REGISTRY=10.106.136.21:5000
+ARG IMAGE_VERSION=8
+FROM ${DOCKER_REGISTRY}/reluxy/node:${IMAGE_VERSION}
+
+COPY package.json /tmp/package.json
+RUN cd /tmp && npm install --production
+RUN mkdir -p /usr/src/app && mv /tmp/node_modules /usr/src
+WORKDIR /usr/src/app
+COPY . /usr/src/app
+EXPOSE 3000
+
+USER app
+
+CMD ["pm2-docker", "process.json"]
+
+# 保留的日志文件个数（每个文件的默认大小为10M）
+RUN pm2 set pm2-logrotate:retain 5

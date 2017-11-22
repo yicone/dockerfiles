@@ -1,0 +1,11 @@
+.git/
+.gitignore
+LICENSE
+README.md
+
+src/client/
+src/shared/
+src/template/
+
+webpack/
+webpack*.js
