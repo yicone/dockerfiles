@@ -14,4 +14,5 @@
 - *-dev 镜像预装的 npm  packages: `n npm-check`
 - 基础镜像版本默认为 node:latest
 - 构建时可指定基础镜像版本 例 `docker build --build-arg NODE_VERSION=8 ./node -t reluxy/node:8`
+- 应用的 Dockerfile 模板中，当前指定的 `NODE_VERSION` 为 `8`看，即使用 `node` 当前的 `lts` 版本
 - 设置时区为 `Asia/Shanghai`
